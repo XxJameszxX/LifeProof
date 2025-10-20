@@ -1,0 +1,30 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Env
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Editors
+.vscode/
+.idea/
+
+# Frontend build
+lifeproof-frontend/.next/
+lifeproof-frontend/next/
+lifeproof-frontend/out/
+lifeproof-frontend/.vercel/
+lifeproof-frontend/coverage/
+
+# Hardhat build
+lifeproof-hardhat-template/artifacts/
+lifeproof-hardhat-template/cache/
+lifeproof-hardhat-template/coverage/
