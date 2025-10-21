@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 min-h-screen;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl rounded-2xl shadow-glass border border-white/20;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl font-semibold
+           hover:shadow-lg hover:scale-[1.01] active:scale-[0.99] active:translate-y-px transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 rounded-lg font-medium
+           hover:bg-white hover:shadow-md active:scale-[0.99] active:translate-y-px transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-primary-200 border border-gray-200 disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent
+           transition-all duration-200 placeholder:text-gray-400;
+  }
+
+  .event-card {
+    @apply glass-card p-6 hover:shadow-card-hover transition-all duration-300
+           hover:scale-[1.02] cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-600;
+  }
+}
+
