@@ -1,0 +1,43 @@
+{
+  "name": "lifeproof-hardhat-template",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf artifacts cache deployments",
+    "compile": "hardhat compile",
+    "typechain": "hardhat typechain",
+    "build": "hardhat compile && hardhat typechain",
+    "node": "hardhat node",
+    "deploy:localhost": "hardhat deploy --network localhost --tags LifeProof",
+    "deploy:sepolia": "hardhat deploy --network sepolia --tags LifeProof",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "test": "hardhat test"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "^0.1.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-verify": "^2.1.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "chai": "^4.5.0",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.0",
+    "hardhat-deploy": "^0.11.45",
+    "hardhat-gas-reporter": "^2.3.0",
+    "rimraf": "^6.0.1",
+    "solidity-coverage": "^0.8.16",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@fhevm/solidity": "^0.8.0",
+    "@zama-fhe/oracle-solidity": "^0.1.0",
+    "encrypted-types": "^0.0.4"
+  }
+}
+
+
